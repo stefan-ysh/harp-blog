@@ -1,55 +1,42 @@
+<link rel="stylesheet" href="./css/bootstrap.css" />
 <style>
-  .container {
-    min-width: 330px;
-  }
-
-  .container .card-block {
-    border: 1px solid red;
-    margin-bottom: 10px;
-    border-radius: 10px;
-  }
-  .container .card-block:hover {
-    border-left-color: yellow;
-  }
-  .container .card-block .content-wrap {
-    display: flex;
-    flex-direction: row;
-  }
-  .container .card-block .content-wrap img {
-    width: 300px;
-    object-fit: contain;
-  }
-  @media screen and (max-width: 500px) {
-    .container .card-block .content-wrap {
-      flex-direction: column;
-    }
-    .container .card-block .content-wrap img {
-      width: 100%;
-    }
+  a {
+    text-decoration: none;
   }
 </style>
 <div class="container">
   <!-- page body //-->
   <!-- One card per Blog snippet, which is read from the blog/_data.json file -->
-  <% for(var varBlog in public.blog._data) { %>
-  <div class="card-block">
-    <a href="blog/<%= varBlog %>" class="btn btn-primary"
-      ><h4 class="card-title">
-        <%= public.blog._data[varBlog].pageTitle %>
-      </h4></a
-    >
-    <p>
-      <small
-        >Posted by <a href="#"><%= public.blog._data[varBlog].author %></a> on
-        <%= public.blog._data[varBlog].date %> in
-        <a href="#">Category</a></small
-      >
-    </p>
-    <div class="content-wrap">
-      <p class="card-text"><%= public.blog._data[varBlog].snippet %></p>
-      <img src="/blog/images/<%- public.blog._data[varBlog].img %>" alt="" />
+  <% for(var blog in public.blog._data) { %>
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="/blog/images/<%- public.blog._data[blog].img %>"
+          class="img-fluid rounded-start"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <a href="blog/<%= blog %>" style="color: rgb(119, 103, 103)"
+            ><h5 class="card-title">
+              <%= public.blog._data[blog].pageTitle %>
+            </h5></a
+          >
+          <p class="card-text"><%= public.blog._data[blog].snippet %></p>
+          <p class="card-text">
+            <small class="text-muted"
+              >Posted
+              <!-- by <a href="#"><%= public.blog._data[blog].author %></a>  -->
+              on <%= public.blog._data[blog].date %> in
+              <a href="#">Category</a></small
+            >
+          </p>
+        </div>
+      </div>
     </div>
   </div>
   <% }; %>
   <!-- End of One card per Blog snippet -->
 </div>
+<script src="./js/bootstrap.js"></script>
