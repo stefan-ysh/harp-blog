@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "docs:dev": "harp ./public",
+    "docs:build": "harp ./public ./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
