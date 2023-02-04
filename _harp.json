@@ -1,0 +1,6 @@
+{
+    "_comment": "global settings and variables that will be used across the entire blog",
+    "globals": {
+        "siteTitle": "Creating a Blog Theme with Bootstrap and Harp.js"
+    }
+}
