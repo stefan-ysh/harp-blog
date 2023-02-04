@@ -1,0 +1,9 @@
+{
+  "_comment": "template-specific variables and settings; we'll set up one variable for each page template which will hold the name of the page.",
+  "index": {
+    "pageTitle": "Home"
+  },
+  "about": {
+    "pageTitle": "about"
+  }
+}

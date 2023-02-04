@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title><%- pageTitle %> | <%- siteTitle %></title>
+  </head>
+  <body>
+    <%- partial("../layout/_header") %> 
+    <% for(let blog in public.blog._data)
+    { %>
+    <div class="card-block">
+      <span
+        style="<%- blog === current.source ? 'display: block;' : 'display: none;'%>"
+      >
+        <%- public.blog._data[blog].pageTitle %>
+      </span>
+    </div>
+    <% }; %>
+    <%- yield %> <%- partial("../layout/_footer") %>
+  </body>
+</html>

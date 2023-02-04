@@ -1,0 +1,50 @@
+<style>
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .active {
+    background-color: rgb(231, 189, 189);
+    color: red;
+  }
+</style>
+<nav class="navbar navbar-expand-md navbar-light bg-faded">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarTogglerDemo03"
+    aria-controls="navbarTogglerDemo03"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    菜单
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <div class="input-group pull-xs-right">
+      <input type="text" class="form-control" placeholder="Search this blog" />
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="button">搜索</button>
+      </div>
+    </div>
+    <div class="navbar-nav float-left text-left pr-3">
+      <a
+        class="nav-item nav-link <%- current.source == 'index' ? 'active' : '' %>"
+        href="/index.html"
+        >Home</a
+      >
+      <a
+        class="nav-item nav-link <%- current.source == 'about' ? 'active' : '' %>"
+        href="/about.html"
+        >About</a
+      >
+      <a
+        class="nav-item nav-link"
+        href="https://github.com/stefan-ysh"
+        target="_blank"
+        >GitHub</a
+      >
+    </div>
+  </div>
+</nav>
