@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/stefan-ysh/harp-blog/issues"
   },
-  "homepage": "https://github.com/stefan-ysh/harp-blog#readme"
+  "homepage": "https://github.com/stefan-ysh/harp-blog#readme",
+  "dependencies": {
+    "harp": "^0.46.1"
+  }
 }
