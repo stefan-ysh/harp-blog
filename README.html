@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags always come first -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>衣乌岸苑</title>
+</head>
+<body>
+<style>
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+.navbar-operation {
+display: flex;
+}
+.search-operation {
+display: flex;
+}
+.active {
+background-color: rgb(231, 189, 189);
+color: red;
+}
+</style>
+<nav class="navbar">
+<button class="navbar-toggler">菜单</button>
+<div class="navbar-operation">
+<div class="search-operation">
+<input type="text" class="form-control" placeholder="Search this blog" />
+<div class="input-group-append">
+<button class="btn btn-secondary" type="button">搜索</button>
+</div>
+</div>
+<div class="navigator-operation">
+<a
+class="nav-item "
+href="/index.html"
+>Home</a
+>
+<a
+class="nav-item "
+href="/about.html"
+>About</a
+>
+<a class="nav-item" href="https://github.com/stefan-ysh" target="_blank"
+>GitHub</a
+>
+</div>
+</div>
+</nav>
+<h1>blogstrapi</h1><p>Personal blog using a Dynamic CMS for development with a Static HTML for deployment.</p>
+<hr>
+<h2>About blogstrapi</h2><p><strong>blogstrapi</strong> was a personal project to create a GUI <strong>head</strong> that is modular, which can be developed with any &quot;Headless&quot; CMS backend.</p>
+<p><img src="https://snipboard.io/wuN75Z.jpg" alt="Index page"></p>
+<hr>
+<h3>Responsive and Fast</h3><p>The GUI is developed using Bootstrap 4 and Harp.js, which supports EJS. The navigation menu collapses, when viewed on a mobile device, into a <em>hamburger</em> menu.</p>
+<p><img src="https://snipboard.io/GliKR3.jpg" alt="Viewed on a mobile device"></p>
+<hr>
+<h3>Modular</h3><p>Partials that contain embeddable code are stored in the <em>layout</em> folder, e.g. <em>_header.ejs</em>.</p>
+<hr>
+<h3>Head</h3><p>Blog articles are stored as <em>markdown</em> files in the <em>blog/</em> folder, while their metadata are stored in <em>_data.json</em> within the same folder. Harp generates one <em>html</em> per <em>markdown</em> file.</p>
+<p>The index page dynamically populates all articles&#39; snippets from the <em>metadata</em> stored in <em>blog/_data.json</em>.</p>
+<hr>
+<h2>Blog</h2><p>This is my <a href="http://blog.tldr.pro">blog</a>, which is based on the this template, and it has a <a href="http://tldr.pro/blog/blog/creating-a-blog-theme-with-bootstrap-and-harp.html">tutorial</a> explaining how <strong>bootstrapi</strong> was developed.</p>
+<hr>
+<h2>Project Structure</h2><pre><code> blogstrapi/                 &lt;-- Root of your project
+   |- package.json           &lt;-- Node.js project entries
+   |- _harp.json             &lt;-- Global variables goes here
+   |- _data.json             &lt;-- Page variables goes here
+   |- _layout.ejs            &lt;-- Common layout for each page in root folder
+   |- index.ejs              &lt;-- Home page of your blog, Harp will produce an index.html
+   +- css/                   &lt;-- Holds any CSS or SCSS theme files
+      |- bootstrap.min.css   &lt;-- At a minimum, the bootstrap CSS file
+      |- mytheme.css         &lt;-- Our custom CSS theme goes here
+   +- js/                    &lt;-- Holds any JS files
+      |- bootstrap.min.js    &lt;-- At a minimum, the bootstrap JS file
+   +- layout/                &lt;-- Holds any partials, prefixed with &quot;_&quot;
+      |- _header.ejs         &lt;-- Header partial, i.e. called by partial() function
+      |- _footer.ejs         &lt;-- Footer partial, i.e. called by partial() function
+   +- blog/                  &lt;-- Holds any articles in Markdown files, Harp produces a html per md file
+      |- _data.json          &lt;-- Blog articles metadata goes here
+      |- _layout.ejs         &lt;-- Layout for each article in blog/ folder
+</code></pre>
+<hr>
+<h2>Example Usage</h2><p>In the following example, the default application will be created in the folder <em>myproject/</em>.</p>
+<pre><code> $ harp init myproject --boilerplate dennislwm/blogstrapi
+</code></pre>
+<p>In the folder <em>myproject/</em>, spin up the server, which can be viewed at <a href="http://localhost:9000">localhost:9000</a></p>
+<pre><code> $ harp server
+</code></pre>
+<hr>
+<h2>Reach Out!</h2><p>Please consider giving this repository a star on GitHub.</p>
+<hr>
+<h2>License</h2><p>The <strong>blogstrapi</strong> source code is licensed under the <a href="https://github.com/dennislwm/blogstrapi/blob/master/LICENSE">GPL-3.0 license</a>.</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<style>
+#footer {
+width: 100%;
+height: 50px;
+line-height: 50px;
+position: absolute;
+bottom: 0;
+left: 50%;
+translate: -50% 0;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="footer">
+copyright @ 1991-2023
+</div>
+</body>
+</html>
+</body>
+</html>
